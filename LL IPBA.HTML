@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="body {.css">
+    <title>Webpage with Sidebar</title>
+    
+    <!-- Google Fonts: Roboto for simpler, clean font -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif; /* Clean, not too bold font */
+            margin: 0;
+            padding: 0;
+        }
+
+        .sidebar {
+            width: 220px; /* Sidebar width */
+            background-color: #ebebeb; /* Sidebar color */
+            color: #333;
+            position: fixed;
+            height: 100%;
+            padding: 20px;
+        }   
+
+        .sidebar-header {
+            font-size: 24px;
+            margin-bottom: 20px;
+            font-family: Impact, sans-serif; /* IPBA TUBE keeps Impact font */
+        }
+
+        .sidebar-links a {
+            color: #333;
+            text-decoration: none;
+            display: block;
+            padding: 10px;
+            transition: background-color 0.3s;
+        }
+
+        .sidebar-links a:hover {
+            background-color: #d1d1d1;
+        }
+
+        .member-list {
+            margin-top: 20px;
+        }
+
+        .main-content {
+            margin-left: 240px; /* Adjusted to match new sidebar size */
+            padding: 20px;
+            padding-top: 70px; /* Ensures content doesn't overlap with the top bar */
+        }
+
+        .image-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .image-card {
+            width: 30%;
+            padding: 10px;
+            position: relative;
+        }
+
+        .image-title {
+            margin-top: 10px;
+            font-size: 18px;
+            display: flex;
+            justify-content: space-between; /* Space between text and 3-dot icon */
+            align-items: center;
+            text-align: left; /* Ensures text is left-aligned */
+        }
+
+        .image-title i {
+            margin-right: 10px;
+            color: #333;
+        }
+
+        /* Top bar styling */
+        .top-bar {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            padding: 10px 20px;
+            position: fixed;
+            top: 0;
+            right: 0;
+            width: calc(100% - 240px); /* Adjust to not overlap sidebar */
+            z-index: 999; /* Ensures it's above the content */
+            height: 50px;
+            background-color: transparent; /* Transparent top bar */
+        }
+
+        .top-bar .menu-item {
+            margin-left: 20px;
+            font-size: 18px;
+            color: #333;
+        }
+
+        .top-bar i {
+            cursor: pointer;
+            margin-left: 20px;
+            font-size: 20px;
+        }
+
+        /* Style for the 3-dot icon */
+        .image-options {
+            cursor: pointer;
+            font-size: 16px;
+            color: #333;
+        }
+
+        /* Align profile icon and text on the left */
+        .profile-text-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between; /* Space between profile text and dots */
+            width: 100%; /* Ensures it takes the full width */
+        }
+
+        .profile-text {
+            display: flex;
+            align-items: center; /* Aligns the icon and text vertically */
+        }
+
+        .profile-text i {
+            margin-right: 10px; /* Space between icon and text */
+        }
+    </style>
+</head>
+<body>
+
+    <div class="sidebar">
+        <div class="sidebar-header">
+            <i class="fa-solid fa-video"></i> <!-- Replace this with the desired icon for Home -->
+            IPBA TUBE
+        </div>
+        <hr />
+        <div class="sidebar-links">
+            <a href="LL IPBA.HTML" class="active">
+                <i class="fas fa-home"></i>  <!-- Home icon -->
+                Home
+            </a>
+            <a href="Untitled31.html">
+                <i class="fa-solid fa-film"></i> <!-- Shorts icon -->
+                Shorts
+            </a>
+            <a href="Untitled21.html">
+                <i class="fa-solid fa-layer-group"></i> <!-- Content types icon -->
+                Content types
+            </a>
+        </div>
+        <hr />
+        <div class="member-list">
+            <h4>Group 9 - members</h4>
+            <ul>
+                <li>Aisha Aguilar</li>
+                <li>Joel Acoba</li>
+                <li>Xiana Lei Sentillas</li>
+                <li>Tamara Anya Shan</li>
+                <li>Andrea Tanteo</li>
+            </ul>
+        </div>
+    </div>
+    
+    <!-- Top Bar with Menu, Profile, and Notification Icons -->
+    <div class="top-bar">
+        <div class="menu-item">Menu</div>
+        <i class="fas fa-bell"></i> <!-- Notification icon -->
+        <i class="fas fa-circle-user"></i> <!-- Profile icon -->
+    </div>
+
+    <div class="main-content">
+        <div class="search-container">
+            <input type="text" class="search-bar" placeholder="Search..." id="searchBar">
+        </div>
+        <div class="small-title">LATEST</div>
+        <div class="image-container">
+            <div class="image-card">
+                <img src="https://scontent.xx.fbcdn.net/v/t1.15752-9/462283500_550807030853390_1615207820056584677_n.png?_nc_cat=102&ccb=1-7&_nc_sid=0024fc&_nc_ohc=9HKltOICgCgQ7kNvgGWD7zQ&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.xx&_nc_gid=Ae8hxbbeY7VI7TqkAJW9I1c&oh=03_Q7cD1QHgiuC86NG5IDpsxrX8LF3-7z2eTtv-kuHoDS1AFbDBaQ&oe=67305AE9">
+                <div class="image-title">
+                    <div class="profile-text-container">
+                        <div class="profile-text">
+                            <i class="fas fa-circle-user"></i> Fundraising Event for Sitio Bebe
+                        </div>
+                        <i class="fas fa-ellipsis-v image-options"></i> <!-- 3-dot icon -->
+                    </div>
+                </div>
+            </div>
+            <div class="image-card">
+                <img src="https://scontent.xx.fbcdn.net/v/t1.15752-9/462188513_550899737433846_3953853494912379886_n.png?_nc_cat=103&ccb=1-7&_nc_sid=0024fc&_nc_ohc=1-Irdj5MVOEQ7kNvgGOWD6F&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.xx&_nc_gid=Ae8hxbbeY7VI7TqkAJW9I1c&oh=03_Q7cD1QHrxLC5KaBgm0x_WclBif26Nni3X4Roqi6KvoMx0k-eXA&oe=67308596">
+                <div class="image-title">
+                    <div class="profile-text-container">
+                        <div class="profile-text">
+                            <i class="fas fa-circle-user"></i> Artist to perform
+                        </div>
+                        <i class="fas fa-ellipsis-v image-options"></i> <!-- 3-dot icon -->
+                    </div>
+                </div>
+            </div>
+            <div class="image-card">
+                <img src="https://scontent.xx.fbcdn.net/v/t1.15752-9/462538021_1610811293150328_1705845094059634358_n.png?_nc_cat=109&ccb=1-7&_nc_sid=0024fc&_nc_ohc=RXUF28ZteZsQ7kNvgHyMFZw&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.xx&_nc_gid=Ae8hxbbeY7VI7TqkAJW9I1c&oh=03_Q7cD1QGF9ZqyneqEeTkBZqAmXRYnHNt8RfpqmeUJPptAadEWnQ&oe=673077C3">
+                <div class="image-title">
+                    <div class="profile-text-container">
+                        <div class="profile-text">
+                            <i class="fas fa-circle-user"></i> Profit information
+                        </div>
+                        <i class="fas fa-ellipsis-v image-options"></i> <!-- 3-dot icon -->
+                    </div>
+                </div>
+            </div>
+            <div class="image-card">
+                <img src="https://scontent.xx.fbcdn.net/v/t1.15752-9/462557468_480395451667147_2514298614577878303_n.png?_nc_cat=109&ccb=1-7&_nc_sid=0024fc&_nc_ohc=iKtXItVY3cYQ7kNvgHRY4jK&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.xx&_nc_gid=Ae8hxbbeY7VI7TqkAJW9I1c&oh=03_Q7cD1QEHqeYb7v3MTrU7PNh-tdxrfhwwJQWuWbYg610k8YvRkg&oe=673057D5">
+                <div class="image-title">
+                    <div class="profile-text-container">
+                        <div class="profile-text">
+                            <i class="fas fa-circle-user"></i> Concert Details
+                        </div>
+                        <i class="fas fa-ellipsis-v image-options"></i> <!-- 3-dot icon -->
+                    </div>
+                </div>
+            </div>
+            <div class="image-card">
+                <img src="https://scontent.xx.fbcdn.net/v/t1.15752-9/462542331_3903749203278916_9165168320740502050_n.png?_nc_cat=106&ccb=1-7&_nc_sid=0024fc&_nc_ohc=68ooLglLBdsQ7kNvgH_8vw6&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.xx&_nc_gid=Ae8hxbbeY7VI7TqkAJW9I1c&oh=03_Q7cD1QHOMirCTfKJhFijQGUw3KsQwkrMONSqFa6TSyLCQSENwg&oe=67306481">
+                <div class="image-title">
+                    <div class="profile-text-container">
+                        <div class="profile-text">
+                            <i class="fas fa-circle-user"></i> Buy Tickets now!
+                        </div>
+                        <i class="fas fa-ellipsis-v image-options"></i> <!-- 3-dot icon -->
+                    </div>
+                </div>
+            </div>
+            <div class="image-card">
+                <img src="https://scontent.xx.fbcdn.net/v/t1.15752-9/462537050_578968194520830_1271712122957525329_n.png?_nc_cat=104&ccb=1-7&_nc_sid=0024fc&_nc_ohc=41WLOzIzVa8Q7kNvgHMACOH&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.xx&_nc_gid=Ae8hxbbeY7VI7TqkAJW9I1c&oh=03_Q7cD1QE_VX6kK1Y3vQZ5iXLDp3aI8i4Jy1VCBnrdZNe97egmgQ&oe=67305DEB" alt="Sample Image 5">
+                <div class="image-title">
+                    <div class="profile-text-container">
+                        <div class="profile-text">
+                            <i class="fas fa-circle-user"></i> How to support Sitio Bebe
+                        </div>
+                        <i class="fas fa-ellipsis-v image-options"></i> <!-- 3-dot icon -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Simple search functionality with placeholder interaction
+        const search 

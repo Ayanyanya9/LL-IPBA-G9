@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="body {.css">
+    <title>Webpage with Sidebar</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            overflow: hidden; /* Hide all scrollbars */
+        }
+
+        .sidebar {
+            width: 220px;
+            background-color: #ebebeb;
+            color: #333;
+            position: fixed;
+            height: 100%;
+            padding: 20px;
+        }   
+
+        .sidebar-header {
+            font-size: 24px;
+            margin-bottom: 20px;
+            font-family: Impact, sans-serif;
+        }
+
+        .sidebar-links a {
+            color: #333;
+            text-decoration: none;
+            display: block;
+            padding: 10px;
+            transition: background-color 0.3s;
+        }
+
+        .sidebar-links a:hover {
+            background-color: #d1d1d1;
+        }
+
+        .sidebar-links a.active {
+            background-color: #d1d1d1;
+        }
+
+        .member-list {
+            margin-top: 20px;
+        }
+
+        .main-content {
+            margin-left: 240px;
+            padding: 20px;
+            padding-top: 70px;
+            height: 100vh;
+            overflow-y: auto; /* Allow vertical scrolling if content exceeds viewport */
+        }
+
+        /* Styles for the Reels section */
+        .reels-section {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh; /* Full height for vertical scrolling */
+            overflow: hidden; /* Hide overflow */
+        }
+
+        .reels-container {
+            position: relative; /* For absolute positioning of scroll button */
+            height: 80%; /* Adjusted for better visibility */
+            width: 100%; /* Full width for portrait */
+            overflow: hidden; /* Hide overflow */
+        }
+
+        .reel-card {
+            display: none; /* Initially hide all reels */
+            position: absolute; /* Allow stacking of cards */
+            width: 100%; /* Full width */
+            height: 100%; /* Full height */
+            border-radius: 10px; /* Rounded corners */
+            overflow: hidden; /* Ensure content doesn't overflow */
+        }
+
+        .reel-card img {
+            width: 100%; /* Full width */
+            height: 100%; /* Full height */
+            border-radius: 10px; /* Round corners */
+            object-fit: cover; /* Maintain aspect ratio */
+        }
+
+        .scroll-button {
+            position: absolute;
+            bottom: 20px; /* Position above the bottom of the image */
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: rgba(0, 0, 0, 0.7);
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 20px; /* Rounded button */
+            cursor: pointer;
+            font-size: 16px;
+            z-index: 1; /* Make sure it appears above the image */
+        }
+    </style>
+</head>
+<body>
+
+    <div class="sidebar">
+        <div class="sidebar-header">
+            <i class="fa-solid fa-video"></i>
+            IPBA TUBE
+        </div>
+        <hr />
+        <div class="sidebar-links">
+            <a href="LL IPBA.HTML">
+                <i class="fas fa-home"></i>  
+                Home
+            </a>
+            <a href="Untitled31.html" class="active">
+                <i class="fa-solid fa-film"></i> 
+                Shorts
+            </a>
+            <a href="Untitled21.html">
+                <i class="fa-solid fa-layer-group"></i> 
+                Content types
+            </a>
+        </div>
+        <hr />
+        <div class="member-list">
+            <h4>Group 9 - members</h4>
+            <ul>
+                <li>Aisha Aguilar</li>
+                <li>Joel Acoba</li>
+                <li>Xiana Lei Sentillas</li>
+                <li>Tamara Anya Shan</li>
+                <li>Andrea Tanteo</li>
+            </ul>
+        </div>
+    </div>
+    
+    <div class="main-content">
+        <div class="search-container">
+            <input type="text" class="search-bar" placeholder="Search..." id="searchBar">
+        </div>
+        
+        <div class="reels-section">
+            <div class="reels-container" id="reelsContainer">
+                <div class="reel-card" id="reel1">
+                    <img src="https://scontent.xx.fbcdn.net/v/t1.15752-9/462543981_1103741441110967_3763086229745357623_n.png?_nc_cat=101&ccb=1-7&_nc_sid=0024fc&_nc_ohc=H1UN5mhZadIQ7kNvgFWsvWC&_nc_ad=z-m&_nc_cid=0&_nc_ht=scontent.xx&_nc_gid=AutGqXlmS44UW0c3NjbflU0&oh=03_Q7cD1QHSElzmwdk1c8bHu37uXr0IYylzYm30aB8WONeWjyXM9A&oe=672F4143" alt="Reel 1"> <!-- Replace with your image path -->
+                </div>
+                <div class="reel-card" id="reel2">
+                    <img src="https://scontent.xx.fbcdn.net/v/t1.15752-9/462538298_8595167927265394_2777354439081408004_n.png?_nc_cat=106&ccb=1-7&_nc_sid=0024fc&_nc_ohc=HIiZyuExEgIQ7kNvgGZbOCl&_nc_ad=z-m&_nc_cid=0&_nc_ht=scontent.xx&_nc_gid=A66k9ZrlTw8rKTuLvD5n4MU&oh=03_Q7cD1QE-y7IvVHuvqEfujcqm_ppMq_JuVVRJUHIK3_n9p5ARHQ&oe=672F5467" alt="Reel 2"> <!-- Replace with your image path -->
+                </div>
+                <div class="reel-card" id="reel3">
+                    <img src="https://scontent.xx.fbcdn.net/v/t1.15752-9/462536923_1062327045245537_5933331743956293403_n.png?_nc_cat=101&ccb=1-7&_nc_sid=0024fc&_nc_ohc=zfNBRsM4ZYsQ7kNvgEkifs6&_nc_ad=z-m&_nc_cid=0&_nc_ht=scontent.xx&_nc_gid=AMF-aWZfFKgrKf3gCEcDidA&oh=03_Q7cD1QFaNdBzovp_n_8L4RkWNaI11e5GW46oUfiBAchTr6K_Lw&oe=672F4A7E" alt="Reel 3"> <!-- Replace with your image path -->
+                </div>
+                <button class="scroll-button" onclick="scrollToNext()">Scroll</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let currentReelIndex = 0; // Track the currently visible reel
+        const reels = document.querySelectorAll('.reel-card');
+
+        // Show the first reel on page load
+        reels[currentReelIndex].style.display = 'block';
+
+        function scrollToNext() {
+            // Hide the current reel
+            reels[currentReelIndex].style.display = 'none';
+            // Increment the index to show the next reel
+            currentReelIndex++;
+
+            // If we go beyond the last reel, reset to the first
+            if (currentReelIndex >= reels.length) {
+                currentReelIndex = 0;
+            }
+
+            // Show the next reel
+            reels[currentReelIndex].style.display = 'block';
+        }
+    </script>
+</body>
+</html>
